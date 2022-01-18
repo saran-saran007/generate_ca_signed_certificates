@@ -1,0 +1,16 @@
+####################################################################
+[ signing_policy ]
+countryName            = optional
+stateOrProvinceName    = optional
+localityName           = optional
+organizationName       = optional
+organizationalUnitName = optional
+commonName             = supplied
+emailAddress           = optional
+
+####################################################################
+[ signing_req ]
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid,issuer
+basicConstraints       = CA:FALSE
+keyUsage               = digitalSignature, keyEncipherment
