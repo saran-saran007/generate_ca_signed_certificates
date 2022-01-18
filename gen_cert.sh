@@ -30,3 +30,7 @@ echo '01' > serial.txt
 openssl ca -config openssl-ca.cnf -policy signing_policy -extensions signing_req -out servercert.pem -infiles servercert.csr
 
 openssl x509 -in servercert.pem -text -noout
+
+printf "Server/Client certificates: servercert.pem \n"
+printf "Server/Client keys: serverkey.pem \n"
+printf "CA Certificate: cacert.pem \n"
