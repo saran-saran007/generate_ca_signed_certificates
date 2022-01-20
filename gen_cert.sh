@@ -4,7 +4,7 @@ touch openssl-ca.cnf
 
 cat ca.cfg > openssl-ca.cnf
 
-openssl req -x509 -config openssl-ca.cnf -newkey rsa:4096 -sha256 -nodes -out cacert.pem -outform PEM
+openssl req -x509 -config openssl-ca.cnf -newkey rsa:4096 -sha256 -nodes -days 365 -out cacert.pem -outform PEM
 
 printf "Generated cacertficate:-\n"
 
